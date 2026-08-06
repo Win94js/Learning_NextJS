@@ -1,9 +1,9 @@
 export default async function Docs({
   params,
 }: {
-  params: Promise<{ slug?: string[] }>;
+  params: Promise<{ slug: string[] }>;
 }) {
-  const { slug = [] } = await params;
+  const { slug  } = await params;
 
   if (slug.length === 2) {
     return (
