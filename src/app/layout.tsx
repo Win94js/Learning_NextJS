@@ -1,8 +1,12 @@
-import { ChildProcess } from "child_process";
+
 import type  {Metadata} from "next";
 
 export const metadata: Metadata = {
-    title: "Next.js",
+    title: {
+        default:"Next JS Learning - From Codevolution ",
+        template:"%s | Next JS step Learning",
+        absolute:"",
+    },
     description: "Next Js Application Building."
 }
 
