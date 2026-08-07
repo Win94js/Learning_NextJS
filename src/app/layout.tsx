@@ -1,10 +1,10 @@
 import { ChildProcess } from "child_process";
 import type  {Metadata} from "next";
 
-// export const metadata: Metadata = {
-//     title: "Next.js",
-//     description: "Next Js Application Building."
-// }
+export const metadata: Metadata = {
+    title: "Next.js",
+    description: "Next Js Application Building."
+}
 
 export default function RootLayout({
     children,
