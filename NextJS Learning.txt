@@ -1,0 +1,28 @@
+NextJS Learning
+
+page.tsx - စာမျက်နှာ UI
+
+layout.tsx - Layout UI
+
+loading.tsx - Page Loading ပြရန်
+
+error.tsx - Error Handling လုပ်ရန်
+
+not-found.tsx - 404 Page ပြရန်
+
+route.ts - Backend API Route ရေးရန်
+
+===========================================================================================
+
+App Router တွင် မကြာခဏ သုံးလေ့ရှိသည့် Reserved Functions များ
+
+Function Nameအသုံးပြုသည့် နေရာ / တာဝန်
+
+generateMetadataDynamic SEO Title၊ Description နှင့် OpenGraph Tags များ ထုတ်ပေးရန်
+
+generateViewportDynamic Viewport (Screen size, Theme Color) များ သတ်မှတ်ရန်
+
+generateStaticParamsDynamic Routes ([id]) များကို Build Time မှာတည်းက SSG (Static Web Pages) အဖြစ် ဆောက်လုပ်ထားရန်
+
+
+===========================================================================================
