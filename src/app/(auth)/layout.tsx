@@ -1,32 +1,40 @@
-import { ChildProcess } from "child_process";
-import type  {Metadata} from "next";
+"use client"
 
-export const metadata: Metadata = {
-    title: "Next.js",
-    description: "Next Js Application Building."
-}
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import "./styles.css";
+
+// import type  {Metadata} from "next";
+
+// export const metadata: Metadata = {
+//     title: "Next.js",
+//     description: "Next Js Application Building."
+// }
+
+const navLinks = [
+    {name: "Register", href:"/register"},
+    {name: "Login", href:"/login"},
+    {name: "Forgot Password", href:"/forgot-password"}
+]
 
 export default function AuthLayout({
     children,
 }:{
     children: React.ReactNode;
 }){
+    const pathName = usePathname();
     return (
-        
-        <html lang="en">
-        {/* ဒီ <head> နေရာမှာပါသမျှတွေက Metadata ကတာဝန်ယူပေးတယ် */}
-        <body>
-            
+        <div>
+            {navLinks.map((link) => {
+                const isActive = pathName === link.href || (pathName.startsWith(link.href) && link.href !== "/")
+                return (
+                    <Link className={isActive ? "font-bold mr-4":"text-blue-500 mr-4"} href={link.href} key={link.name}>
+                        {link.name}
+                    </Link>
+                );
+            })}
             {children}
-            <footer
-            style={{
-                backgroundColor:"ghostwhite",
-                padding:"1rem"
-            }}>
-                <p>Footer</p>
-            </footer>
-
-        </body>
-        </html>
+        </div>
+        
     )
 }
