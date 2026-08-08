@@ -1,5 +1,4 @@
 "use client"
-import { PathnameContext } from "next/dist/shared/lib/hooks-client-context.shared-runtime";
 import { usePathname } from "next/navigation";
 
 export default function NotFound(){
