@@ -1,5 +1,6 @@
-
 import type  {Metadata} from "next";
+import { ErrorWrapper } from "./error-wrapper";
+
 
 export const metadata: Metadata = {
     title: {
@@ -19,9 +20,19 @@ export default function AuthLayout({
         
         <html lang="en">
         {/* ဒီ <head> နေရာမှာပါသမျှတွေက Metadata ကတာဝန်ယူပေးတယ် */}
+
         <body>
+
+        <header style={{
+            backgroundColor:"lightblue",
+            padding: "1rem",
+        }}>
             
-            {children}
+            <p>Header</p>
+        </header>
+            <ErrorWrapper>
+                {children}
+            </ErrorWrapper>
             <footer
             style={{
                 backgroundColor:"ghostwhite",
