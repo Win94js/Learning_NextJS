@@ -7,7 +7,7 @@ export default async function PhotoPage(
     }) {
      const {id}  = await params;
      const photo: WonderImage = wondersImages.find((p) => p.id === id )!;
-     return (
+      return (
         <div className="container mx-auto my-10">
             <div className="w-1/2 mx-auto">
                 <div>
